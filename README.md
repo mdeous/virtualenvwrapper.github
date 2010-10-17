@@ -9,6 +9,7 @@ Dependencies
 ------------
 
 The following python packages need to be installed and can be downloaded from pypi:
+
 * virtualenv
 * virtualenvwrapper (>=2.0)
 * virtualenvwrapper.project (>=1.0)
@@ -16,6 +17,7 @@ The following python packages need to be installed and can be downloaded from py
 * gitpython
 
 The following softwares need to be installed:
+
 * git
 
 Installation
