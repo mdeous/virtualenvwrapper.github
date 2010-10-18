@@ -3,7 +3,8 @@ virtualenvwrapper.github
 
 virtualenvwrapper.github is a template for virtualenvwrapper.project (by Doug Hellmann).
 It automaticaly creates a GitHub repository for the new project, initializes the local
-repository and configures the remote origin.
+repository and configures the remote origin. If the GitHub repository already exists,
+user will be prompted to clone the repository or abort the operation.
 
 Dependencies
 ------------
@@ -41,4 +42,4 @@ Just specify 'github' as a template to use when launching the mkproject command:
 
     mkproject -t github my_project_name
 
-Enter your project description and homepage if needed, and you're good to go.
+Enter your project description and homepage if you want, and you're good to go.

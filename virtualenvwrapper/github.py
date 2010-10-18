@@ -33,7 +33,7 @@ def get_environment():
 def template(args):
     """
     Creates a GitHub repository into the project directory,
-    if the GitHub project still exists, clone the repository
+    if the GitHub project still exists, clone the repository.
     """
     prj_name = args[0]
     print 'Initializing git repository and creating GitHub project for %s' % prj_name
@@ -57,7 +57,7 @@ def template(args):
         if choice == 'c':
             print 'Cloning repository from %s' % git_url
             try:
-                # delete src folder to prevent error when cloning (will be created by the clone command)
+                # delete src folder to prevent error when cloning (will be re-created by the clone command)
                 if os.path.exists(src_dir):
                     os.rmdir(src_dir)
                 Repo.clone_from(git_url, src_dir)
