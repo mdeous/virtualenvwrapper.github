@@ -120,6 +120,7 @@ setup(
     author_email = 'mattoufootu@gmail.com',
 
     url = 'http://github.com/mattoufoutu/virtualenvwrapper.github',
+    download_url = 'http://github.com/mattoufoutu/%s/tarball/%s' % (PROJECT, VERSION),
 
     classifiers = [
         'Development Status :: 4 - Beta',
