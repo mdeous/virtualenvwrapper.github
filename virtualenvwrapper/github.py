@@ -74,8 +74,8 @@ def template(args):
         prj_url = raw_input('Project homepage (default=None): ')
         github.repos.create(
                 name = prj_name,
-                description = prj_desc if (prj_desc != '') else None,
-                homepage = prj_url if (prj_url != '') else None,
+                description = prj_desc if prj_desc else None,
+                homepage = prj_url if prj_url else None,
         )
         repo = Repo.init(src_dir)
         repo.create_remote('origin', git_url)
