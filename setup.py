@@ -10,9 +10,6 @@ distribute_setup.use_setuptools()
 
 from setuptools import setup, find_packages
 
-from distutils.util import convert_path
-from fnmatch import fnmatchcase
-
 import os
 import sys
 
@@ -23,6 +20,8 @@ except IOError:
 
 ################################################################################
 # find_package_data is an Ian Bicking creation.
+from distutils.util import convert_path
+from fnmatch import fnmatchcase
 
 # Provided as an attribute, so you can append to these instead
 # of replicating them:
@@ -63,7 +62,6 @@ def find_package_data(
 
     This function is by Ian Bicking.
     """
-
     out = {}
     stack = [(convert_path(where), '', package, only_in_packages)]
     while stack:
@@ -77,9 +75,10 @@ def find_package_data(
                         or fn.lower() == pattern.lower()):
                         bad_name = True
                         if show_ignored:
-                            print >> sys.stderr, (
-                                "Directory %s ignored by pattern %s"
-                                % (fn, pattern))
+                            sys.stderr.write("Directory %s ignored by pattern %s" % (fn, pattern))
+#                            print >> sys.stderr, (
+#                                "Directory %s ignored by pattern %s"
+#                                % (fn, pattern))
                         break
                 if bad_name:
                     continue
@@ -99,9 +98,10 @@ def find_package_data(
                         or fn.lower() == pattern.lower()):
                         bad_name = True
                         if show_ignored:
-                            print >> sys.stderr, (
-                                "File %s ignored by pattern %s"
-                                % (fn, pattern))
+                            sys.stderr.write("File %s ignored by pattern %s" % (fn, pattern))
+#                            print >> sys.stderr, (
+#                                "File %s ignored by pattern %s"
+#                                % (fn, pattern))
                         break
                 if bad_name:
                     continue
